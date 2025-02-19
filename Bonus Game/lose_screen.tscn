@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://LoseButton.gd" type="Script" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 0.039
+anchor_bottom = 0.067
+margin_right = 0.0639992
+margin_bottom = -0.200001
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="Control"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="Label2" type="Label" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 471.0
+margin_bottom = 260.0
+rect_scale = Vector2( 2, 2 )
+text = "Sorry! Try again!"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 453.0
+margin_top = 373.0
+margin_right = 528.0
+margin_bottom = 393.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Play again"
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
